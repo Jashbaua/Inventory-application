@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+</head>
+<body>
+    <h1>Categories</h1>
+    <div><a href="create"><button>Create Category</button></a></div>
+    <%for(let i=0;i<categories.length;i++){%>
+        <div>
+            <a href="category/<%=categories[i]%>"><%=categories[i]%></a>
+            <a href="/update/<%=categories[i]%>">
+                <button>Update</button>
+            </a>
+            <form action="/delete/<%=categories[i]%>" method="post">
+                <button>Delete</button>
+            </form>    
+        </div>
+    <%}%>
+</body>
+</html>
